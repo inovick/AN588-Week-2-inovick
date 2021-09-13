@@ -1,0 +1,30 @@
+---
+title: "Week 2 HW"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+install.packages("stringr")
+library("stringr")
+
+```
+
+## Peer Commentary
+
+## Challenge 1
+```{r}
+v1 <- c("Stately", "plump", "Buck", "Mulligan", "came", "from", "the", "stairhead,", "bearing", "a", "bowl", "of", "lather", "on", "which", "a", "mirror", "and", "a", "razor", "lay", "crossed”)
+ 
+ stringr()
+```
+
+## Error: unmatched opening bracket, however, it is matched, so I'm not sure what the problem is.
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
