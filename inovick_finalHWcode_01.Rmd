@@ -1,0 +1,88 @@
+---
+title: "inovick_finalHWcode_01"
+output: html_document
+
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+install.packages("stringr")
+library("stringr")
+
+```
+
+## Challenge 1
+```{r}
+
+v1 <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+v2 <- gsub("[[:punct:]]", "", v1)
+v3 <- strsplit(v2, " ")
+v4 <- c(v3[[1]])
+v5 <- v4[seq(from = 3, to = 22, by = 3)]
+v5
+ 
+```
+
+
+## Challenge 2
+```{r}
+m <- matrix(data = 1:80, nrow = 8, ncol = 10, byrow = FALSE)
+m
+x <- m[4, 5]
+x
+#1st step, extracting columns 2, 3, and 6 and assigning them to variable x
+x1 <- m[,c(2,3,6)] 
+x1
+#2nd step, extracting rows 6 and 8
+x2 <- m[c(6,8),] 
+x2
+#3rd step, extracting rows and columns
+x3 <- m[c(2:6), c(2:9)]
+x3
+```
+
+## Challenge 3
+```{r}
+a <- array(data = 400:1, dim = c(5, 5, 4, 4))
+a
+
+#1st step
+a[1, 1, 1, 2]
+
+#2nd step
+a[2, 3, 2, ]
+
+#3rd step
+a[1:5, 1:5, 3, 3]
+```
+
+## Challenge 4
+```{r}
+Platyrrhini <- c("Cebidea", "Atelidae", "Pitheciidae")
+Catarrhini <- c("Cercopithecidea", "Hylobatidae", "Hominidae")
+Anthropoidea <- list("Platyrrhini", "Catarrhini")
+names(Anthropoidea) <- list(Platyrrhini, Catarrhini)
+Anthropoidea
+Tarsioidea <- c("Tarsiidae")
+Haplorhini <- list(Anthropoidea, Tarsioidea)
+names(Haplorhini) <- list("Anthropoidea", "Tarsioidea")
+Haplorhini
+Lorisoidea <- c("Lorisidae", "Galagidae")
+Lemuroidea <- c("Cheirogaleidae", "Lepilemuridae", "Indriidae", "Lemuridae", "Daubentoniidae")
+Strepsirhini <- list(Lorisoidea, Lemuroidea)
+names(Strepsirhini) <- list("Lorisoidea", "Lemuroidea")
+Strepsirhini
+Primates <- list(Haplorhini, Strepsirhini)
+names(Primates) <- list("Haplorhini", "Strepsirhini")
+Primates
+```
+
+## Challenge 5
+```{r}
+m3 <- matrix(data = c(3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2), nrow = 5, ncol = 3, byrow = TRUE)
+m3
+m3.df <- as.data.frame(t(m3))
+as.logical(m3.df$Col2)
+as.factor(m3.df$Col3)
+str(m3.df)
+```
+ 
