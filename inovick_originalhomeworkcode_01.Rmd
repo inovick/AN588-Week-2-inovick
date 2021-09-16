@@ -15,16 +15,20 @@ library("stringr")
 ## Challenge 1
 ```{r}
 
-v1 <- c("Stately", "plump", "Buck", "Mulligan", "came", "from", "the", "stairhead,", "bearing", "a", "bowl", "of", "lather", "on", "which", "a", "mirror", "and", "a", "razor", "lay", "crossed”)
+v1 <- c("Stately", "plump", "Buck", "Mulligan", "came", "from", "the", "stairhead", "bearing", "a", "bowl", "of", "lather", "on", "which", "a", "mirror", "and", "a", "razor", "lay", "crossed")
 v1
 
 v1[seq(from = 1, to = 100, by = 3)]
-str_split(v1)
+str_split(v1, 3)
 
  
 ```
 
 ## Error 1: unmatched opening bracket, however, it is matched, so I'm not sure what the problem is. Something is weird with this syntax. PLus signs are happening in the console
+
+## NK: Isabel, I'm having the same issue. I'm not sure what the issue is... Very strange. I copied and pasted just the strings from my code into yours and now it works, but I could not find the reason yours wasn't working because your syntax looked fine to me. 
+
+## NK: When you do the second part (v1[seq(...)]), it seems to acheive extracting every third word but starting with the first word. Do we not want to extract beginning with the third word? Your stringsplit had the same error message mine did. Theoretically you need to put the vector and pattern etc in the parentheses also but when I did, it didn't work either. I'm not sure I understand the syntax for indicating the pattern. 
 
 ## Challenge 2
 ```{r}
@@ -42,6 +46,8 @@ x2
 x3 <- m[c(2:6), c(2:9)]
 x3
 ```
+## NK: We did exactly the same thing here. I think this one was pretty straightforward. 
+
 ## Challenge 3
 ```{r}
 a <- array(data = 400:1, dim = c(5, 5, 4, 4))
@@ -77,6 +83,8 @@ Primates
 ```
 ## Error2: More syntax problems, more unexpected tokens. It still ran but it doesn't like the commas, quotation marks or brackets.
 
+## NK: This ran for me. I did exactly the same thing as you, but I'm not sure I did it right, because when I knit it, it splits everything up weirdly. However, when I run it, it seems to form the list correctly...
+
 ## Challenge 5
 ```{r}
 m3 <- matrix(data = c(3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2), nrow = 5, ncol = 3, byrow = TRUE)
@@ -86,3 +94,4 @@ as.logical(m3.df$Col2)
 as.factor(m3.df$Col3)
 str(m3.df)
 ```
+## NK: We did the same thing here. I'm not really sure what the result was supposed to look like, but I think it worked. 
