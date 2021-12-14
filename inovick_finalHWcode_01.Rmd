@@ -6,10 +6,9 @@ output: html_document
 
 ```{r setup, include=TRUE}
 knitr::opts_chunk$set(echo = TRUE, error = TRUE)
-install.packages("stringr")
 library("stringr")
-
 ```
+
 
 ## Challenge 1
 ```{r}
