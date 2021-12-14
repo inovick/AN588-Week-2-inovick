@@ -3,8 +3,8 @@ title: "inovick_finalHWcode_01"
 output: html_document
 
 
-```{r setup, include=TRUE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE)
 install.packages("stringr")
 library("stringr")
 
